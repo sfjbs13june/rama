@@ -29,6 +29,9 @@ public class StudentControllerTests {
 	@Value("${student.get.url}")
 	String geturl;
 
+	@Value("${student.get.all.url}")
+	String getallurl;
+
 	@Value("${student.post.url}")
 	String posturl;
 
@@ -40,10 +43,18 @@ public class StudentControllerTests {
 
 	@Test
 	public void testStudentGet() throws Exception {
-		ResultActions responseEntity  = mockMvc.perform(get(geturl).param("name","test"));
+		ResultActions responseEntity  = mockMvc.perform(get(geturl).param("name","stud1"));
 		responseEntity.andExpect(status().isOk());
 		String result = responseEntity.andReturn().getResponse().getContentAsString();
 		assertEquals("", result);
+	}
+
+	@Test
+	public void testAllStudentGet() throws Exception {
+		ResultActions responseEntity  = mockMvc.perform(get(getallurl));
+		responseEntity.andExpect(status().isOk());
+		String result = responseEntity.andReturn().getResponse().getContentAsString();
+		assertEquals("{}", result);
 	}
 
 	private ResultActions processApiRequest(String api, HttpMethod methodType, String name, Student student) {
