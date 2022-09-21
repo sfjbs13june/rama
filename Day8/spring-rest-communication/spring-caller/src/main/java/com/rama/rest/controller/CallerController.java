@@ -29,7 +29,7 @@ public class CallerController {
   @GetMapping("/caller/get")
   public String getDetail() {
     ResponseEntity<String> response
-      = restTemplate.getForEntity(receivegetUrl, String.class);
+      = restTemplate.exchange(receivegetUrl,HttpMethod.GET, null,String.class);
     LOGGER.info(response.getStatusCode().toString());
     LOGGER.info(response.getBody());
     return "caller receive data:"+response.getBody();
