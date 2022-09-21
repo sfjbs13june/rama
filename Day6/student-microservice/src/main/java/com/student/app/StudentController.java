@@ -15,6 +15,12 @@ public class StudentController {
         Student result= studentMap.get(name);
         return result;
     }
+
+    @GetMapping("/get/all")
+    public Map<String,Student> getStudent(){
+        return studentMap;
+    }
+
     @PostMapping("save/student")
     public void SaveStudent(@RequestBody Student student){
         String name= student.getName();
