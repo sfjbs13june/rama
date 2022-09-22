@@ -12,21 +12,21 @@ public class ReceiverController {
   public String getDetail() throws InterruptedException {
     LOGGER.info("Receiver request:");
    // Thread.sleep(8000);
-    return "Data from receiver";
+    return "Get Data from receiver";
   }
 
   @PostMapping ("/receiver/post")
   public String saveDetail() throws InterruptedException {
     LOGGER.info("Receiver save request:");
 
-    return "save from receiver";
+    return "Post data save from receiver";
   }
 
   @PutMapping ("/receiver/put")
   public String updatetDetail() throws InterruptedException {
     LOGGER.info("Receiver update request:");
 
-    return "update from receiver";
+    return "put update from receiver";
   }
 
   @DeleteMapping("/receiver/delete")
