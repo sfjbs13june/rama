@@ -3,10 +3,7 @@ package com.rama.rabbitmq.controller;
 import com.rama.rabbitmq.model.Employee;
 import com.rama.rabbitmq.service.RabbitMQSender;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/rabbitmq/")
@@ -21,6 +18,14 @@ public class WebController {
     emp.setEmpId(empId);
     emp.setEmpName(empName);
     rabbitMQSender.send(emp);
+
+    return "Message sent to the RabbitMQ  Successfully";
+  }
+
+  @PostMapping(value = "/employee")
+  public String postEmployee(@RequestBody Employee empployee) {
+
+    rabbitMQSender.send(empployee);
 
     return "Message sent to the RabbitMQ  Successfully";
   }
