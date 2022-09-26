@@ -1,36 +1,46 @@
 package com.hospital.rama.app.controller;
 
 import com.hospital.rama.app.model.Patient;
+import com.hospital.rama.app.repository.DataRepository;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 public class PatientController {
 
-    private Map<String, Patient> patientMap= new HashMap<String,Patient>();
+//   @Autowired
+//    DataRepository dataRepository;
+
+    private final  DataRepository dataRepository;
+    public PatientController(final DataRepository dataRepository){
+        this.dataRepository=dataRepository;
+    }
 
     @GetMapping("/get/patient")
     public Patient getPatient(@RequestParam String name){
-        Patient result= patientMap.get(name);
-        return result;
+        return dataRepository.getPatient(name);
     }
     @PostMapping("save/patient")
-    public void savePatient(@RequestBody Patient student){
-        String name= student.getName();
-        patientMap.put(name,student);
+    public void savePatient(@RequestBody Patient patient){
+        String name= patient.getName();
+        dataRepository.savePatient(name,patient);
     }
     @PutMapping("update/patient")
     public Patient updatePatient(@RequestParam String name,@RequestParam String hospital){
-        Patient result= patientMap.get(name);
+        Patient result= dataRepository.getPatient(name);
         result.setHospital(hospital);
-        patientMap.put(name,result);
+        dataRepository.savePatient(name,result);
         return result;
 
     }
     @DeleteMapping("remove/patient")
     public void deletePatient(@RequestParam String name){
-        patientMap.remove(name);
+        dataRepository.removePatient(name);
+    }
+
+    @GetMapping("/get/header")
+    public Patient getPatientHeader(@RequestParam String name,@RequestHeader String disease){
+        Patient result= dataRepository.getPatient(name);
+        result.setDisease(disease);
+        return result;
     }
 }

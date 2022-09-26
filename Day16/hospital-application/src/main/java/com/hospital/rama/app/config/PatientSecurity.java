@@ -15,6 +15,7 @@ public class PatientSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/save/patient").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/update/patient").hasAnyRole("DOCTOR")
                 .antMatchers(HttpMethod.GET, "/get/patient").hasAnyRole("DOCTOR")
+                .antMatchers(HttpMethod.GET, "/get/header").hasAnyRole("DOCTOR")
                 .antMatchers(HttpMethod.DELETE, "/remove/patient").hasAnyRole("ADMIN").and().csrf().disable().headers()
                 .frameOptions().disable();
     }
