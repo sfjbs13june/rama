@@ -2,14 +2,15 @@ package com.hospital.rama.app.controller;
 
 import com.hospital.rama.app.model.Patient;
 import com.hospital.rama.app.repository.DataRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PatientController {
 
-    private final  DataRepository dataRepository;
-
-    public PatientController(final DataRepository dataRepository){
+    private final DataRepository dataRepository;
+    @Autowired
+    public PatientController( DataRepository dataRepository){
         this.dataRepository=dataRepository;
     }
 
