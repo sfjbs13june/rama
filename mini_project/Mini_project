@@ -57,6 +57,15 @@
        AppointmentRepository
        PrescriptionRepository
 
+       Security access role based:
+
+          "/swagger-ui/index.html")("DOCTOR","PATIENT")
+           "/doctor/doctorappointment").("DOCTOR")
+           "/patient/myappointment").("PATIENT")
+           "/doctor/save").("DOCTOR")
+           "/patient/save").("PATIENT")
+           "/viewprescrption").("DOCTOR","PATIENT")
+           "/saveprescrption").("DOCTOR","PATIENT")
 
   Note: All the data should get store in mongoDb
 
