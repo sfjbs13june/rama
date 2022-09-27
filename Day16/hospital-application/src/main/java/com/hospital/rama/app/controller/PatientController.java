@@ -7,16 +7,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PatientController {
 
-//   @Autowired
-//    DataRepository dataRepository;
-
     private final  DataRepository dataRepository;
+
     public PatientController(final DataRepository dataRepository){
         this.dataRepository=dataRepository;
     }
 
     @GetMapping("/get/patient")
     public Patient getPatient(@RequestParam String name){
+
         return dataRepository.getPatient(name);
     }
     @PostMapping("save/patient")
