@@ -8,7 +8,7 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.abbas.app</groupId>
+	<groupId>com.first.app</groupId>
 	<artifactId>first-spring-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>first-spring-app</name>
