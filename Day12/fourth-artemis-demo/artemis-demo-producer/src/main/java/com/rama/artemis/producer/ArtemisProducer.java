@@ -14,7 +14,7 @@ public class ArtemisProducer {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArtemisProducer.class);
     private final JmsTemplate jmsTemplate;
 
-    @Value("${jms.queue.destination}")
+    @Value("${jms.out.queue.destination}")
     String destinationQueue;
 
     public ArtemisProducer(JmsTemplate jmsTemplate) {
