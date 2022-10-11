@@ -40,8 +40,9 @@ $ mvn install dockerfile:build
 ### Push docker images
 
 ```bash
-docker login
-$ docker push <repository-name>/springsecurity
+$ docker login
+
+$ docker push <repository-name>:<tag>
 ```
 
 ## Running
