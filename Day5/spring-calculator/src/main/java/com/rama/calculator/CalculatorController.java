@@ -11,9 +11,8 @@ public  class CalculatorController {
 
    /* @Autowired
     MyCalculator myCalculator;*/
-    private final MyCalculator myCalculator;
-
-    public CalculatorController(final MyCalculator myCalculator){
+     private MyCalculator myCalculator;
+    public CalculatorController( MyCalculator myCalculator){
         this.myCalculator=myCalculator;
     }
 
