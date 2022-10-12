@@ -1,6 +1,5 @@
 package com.rama.calculator;
 
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,7 +11,7 @@ public class CalculatorControllerTest {
     public void addTest(){
         MyCalculator calculator=new MyCalculator();
         calculatorController=new CalculatorController(calculator);
-       float result= calculatorController.addition(3.0f,4.0f);
+        float result= calculatorController.addition(3.0f,4.0f);
         assertEquals(7.0, result,0.0002);
 
     }
@@ -41,6 +40,15 @@ public class CalculatorControllerTest {
         calculatorController=new CalculatorController(calculator);
         float result= calculatorController.division(12.0f,4.0f);
         assertEquals(3.0, result,0.0002);
+
+    }
+
+    @Test
+    public void addStringTest(){
+        MyCalculator calculator=new MyCalculator();
+        calculatorController=new CalculatorController(calculator);
+        String result= calculatorController.addString("str1","str2");
+        assertEquals("str1str2",result);
 
     }
 }
