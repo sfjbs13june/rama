@@ -39,11 +39,10 @@ $ mvn install dockerfile:build
 
 ### Push docker images
 
+docker login 
 ```bash
-$ docker login
-
-$ docker push <repository-name>:<tag>
-```
+docker login
+$ docker push <repository-name>/<artifact-nam>
 
 ## Running
 

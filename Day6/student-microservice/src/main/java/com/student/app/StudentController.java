@@ -21,12 +21,12 @@ public class StudentController {
         return studentMap;
     }
 
-    @PostMapping("save/student")
+    @PostMapping("/save/student")
     public void SaveStudent(@RequestBody Student student){
         String name= student.getName();
         studentMap.put(name,student);
     }
-    @PutMapping("update/student")
+    @PutMapping("/update/student")
     public Student updateStudent(@RequestParam String name,@RequestParam String std){
         Student result= studentMap.get(name);
         result.setStd(std);
@@ -34,7 +34,7 @@ public class StudentController {
         return result;
 
     }
-    @DeleteMapping("remove/student")
+    @DeleteMapping("/remove/student")
     public void deleteStudent(@RequestParam String name){
         studentMap.remove(name);
     }
