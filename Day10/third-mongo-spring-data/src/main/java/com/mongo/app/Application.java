@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.servers.Server;
-@OpenAPIDefinition(servers = { @Server(url = "/", description = "Default Server URL") })
+@OpenAPIDefinition(servers = { @Server(url = "/", description = "Mongo database app") })
 @SpringBootApplication
 public class Application 
 {

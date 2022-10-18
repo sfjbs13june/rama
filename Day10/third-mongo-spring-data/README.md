@@ -1,7 +1,5 @@
-#Build
-
+# Build
 mvn clean install
-
 # Run
 docker-compose -f docker-compose-mongo.yml up -d
 mvn spring-boot:run
