@@ -1,36 +1,4 @@
-Hospital management system:
-
-Security:
-
-Group: DOCTOR, PATIENT(user1,user2,user3,)
-
-Two Controller: DoctorContoller,PatientController
-
-DoctorController:
-
-GetMapping :/dockers/doctorappointment(doctorName)
-Return  List of appointment
-
-PatientController:
-
-GetMapping /patient/myappointment(patientname)
-return list appointment
-
-PrescriptionController(both can access)
-
- GetMapping /viewprescription(patientname)
- return prescription
-
- PostMapping/saveprescription
- savePrescription(Body)
-
-AppointMent:
-
-appointment_id
-patientName,
-doctorName,
-Date,
-prescription
+Use mongo database to store this model.
 
 Precription:
 
@@ -40,17 +8,15 @@ description
 patientName
 doctorName
 
+Controller
 
+save/appointment
+get/appointment
+update/appointment?patientname=name
+delete/appointment?patientname=name
+get/appointment?patientname=name
 
-AppointmentRepository
-
-findByDoctorName
-findByPatientName
-
-
-PrescriptionRepository
-
-findByPatientName
-
-
+Mockito junit test(mock repository)
+Swagger
+Add readme file.
 
