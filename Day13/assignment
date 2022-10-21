@@ -2,7 +2,26 @@ Send patient data
 
 Post request in body data.
 
-name
-id
-hospital
-disease
+Data Model:
+  a)
+      Appointment :
+
+    String appointmentId;
+    String patientName;
+    String doctorName;
+    String date;
+    Prescription prescription;
+
+  b)   Prescription :
+       String prescriptionId;
+       String appointmentId;
+       String description;
+       String patientName;
+       String doctorName;
+
+1) Create project drom scratch springio
+2) add Swagger
+3) Create readme file update steps
+4) Send or produce the above model in rabbitmq
+5) consume or get message on rabbit UI console.
+
