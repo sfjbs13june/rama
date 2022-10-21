@@ -25,6 +25,5 @@
     <modules>
         <module>artemis-demo-consumer</module>
         <module>artemis-demo-producer</module>
-        
     </modules>
 </project>

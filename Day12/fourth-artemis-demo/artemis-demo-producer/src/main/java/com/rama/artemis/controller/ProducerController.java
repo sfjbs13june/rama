@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProducerController {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ArtemisProducer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProducerController.class);
     private final ArtemisProducer producer;
 
     public ProducerController(ArtemisProducer producer) {

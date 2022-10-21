@@ -26,10 +26,10 @@ public class ArtemisProducer {
              maxAttempts = 10,
              backoff = @Backoff(random = true, delay = 1000, maxDelay = 8000,multiplier = 2)
      )*/
-   /* @Retryable(value = { UncategorizedJmsException.class }, maxAttemptsExpression = "${artemis.retry.maxattempt}",
+   @Retryable(value = { UncategorizedJmsException.class }, maxAttemptsExpression = "${artemis.retry.maxattempt}",
                backoff = @Backoff(random = true, delayExpression = "${artemis.retry.delay}",
                                   maxDelayExpression = "${artemis.retry.maxdelay}", multiplierExpression = "${artemis.retry.multiplier}"))
- */
+
     public void send(String msg) {
         LOGGER.info("Sending Data:");
         jmsTemplate.convertAndSend(destinationQueue, msg);
