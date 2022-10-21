@@ -18,8 +18,25 @@ Data Model:
        String description;
        String patientName;
        String doctorName;
+There should be only one controller
 
-1) Create project drom scratch springio
+send/appointment
+
+{
+    "appointmentId": "id",
+    "patientName": "pat1",
+    "doctorName": "doc1",
+    "date": "25th oct",
+     {
+        "prescriptionId": "presciption1",
+        "appointmentId": "appid1",
+        "patientName": "pat1",
+        "doctorName": "doc1",
+     }
+
+  }
+
+1) Create project drom scratch spring-io
 2) add Swagger
 3) Create readme file update steps
 4) Send or produce the above model in rabbitmq
