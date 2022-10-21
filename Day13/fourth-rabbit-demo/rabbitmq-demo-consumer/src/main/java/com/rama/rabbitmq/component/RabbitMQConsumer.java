@@ -14,24 +14,19 @@ public class RabbitMQConsumer {
   If you are using boot, you can simply add a Jackson2JsonMessageConverter
   @Bean to the configuration and it will be automatically wired into the listener (
    */
- /* @Value("${rabbitmq.queue.name}")
+  @Value("${rabbitmq.queue.name}")
   String queueName;
 
   @Value("${rabbitmq.exchange.name}")
   String exchange;
 
   @Value("${rabbitmq.routingkey.name}")
-  private String routingkey;*/
+  private String routingkey;
   @Bean
   public Jackson2JsonMessageConverter converter() {
     return new Jackson2JsonMessageConverter();
   }
 
-  /*public void send(Employee company) {
-    rabbitTemplate.convertAndSend(exchange, routingkey, company);
-    System.out.println("Send msg = " + company);
-
-  }*/
   @RabbitListener(queues = "${rabbitmq.queue.name}")
   public void recievedMessage(Employee employee) {
     System.out.println("Recieved Message From RabbitMQ: " + employee);
