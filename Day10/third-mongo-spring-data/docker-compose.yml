@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongo_db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  mongo-app:
+    image: falcon007/third-mongo-spring-data:1.0.0
+    depends_on:
+      - mongo_db
+    ports:
+        - "8083:8083"

@@ -4,6 +4,27 @@ mvn clean install
 docker-compose -f docker-compose-mongo.yml up -d
 mvn spring-boot:run
 docker-compose -f docker-compose-mongo.yml down
+
+### Docker containarization:
+
+```bash
+$ mvn install dockerfile:build
+```
+
+### Push docker images
+
+```bash
+docker login
+$ docker push falcon007/third-mongo-spring-data:1.0.0
+```
+
+### Running the application in docker container
+
+```bash
+$ docker run -p 8083:8083 falcon007/third-mongo-spring-data:1.0.0
+$ docker-compose  pull
+$ docker-compose  up
+```
 # training
 ## Post
 
