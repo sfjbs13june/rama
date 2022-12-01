@@ -4,7 +4,7 @@
   <groupId>com.rama.data</groupId>
   <artifactId>simple-maven-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>simple-maven-app</name>
   <url>http://maven.apache.org</url>
   <properties>
