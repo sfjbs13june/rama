@@ -23,6 +23,9 @@
 ### run unit test
     mvn test
 
+## Add git ignore
+    .gitignore
+
 ### commit the code 
     git commit
     git push
