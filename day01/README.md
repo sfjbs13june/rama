@@ -8,20 +8,21 @@
 ### Compile the project
     mvn clean install
 
-### add dependency for unit test
-    <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
+### add property 
+    <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>11</java.version>
+  </properties>
 
 ### write unit test
    
 
 ### run unit test
     mvn test
+
+## Add git ignore
+    .gitignore
 
 ### commit the code 
     git commit
