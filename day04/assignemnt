@@ -1,0 +1,19 @@
+Create a spring boot mocroservice which expose 3 end points
+
+    @GetMapping("/name")
+    return your name
+
+    @GetMapping("/age")
+    return your age
+
+    @GetMapping("/address")
+    return your address
+
+
+   Tasks
+
+   1) Create read me file and update the information
+   2) Create docker image for the application
+   3) Run the application using command with docker
+   4) Verify the response on post man
+   5) commit the code in day04
