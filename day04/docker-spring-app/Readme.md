@@ -13,4 +13,4 @@
 
 ## Run docker image
 
-    docker run falcon007/docker-spring-app:1.0.0
+    docker run -p 8080:8080 falcon007/docker-spring-app:1.0.0
