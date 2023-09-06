@@ -15,12 +15,6 @@
 
     docker run -p 8080:8080 falcon007/docker-spring-app:1.0.0
 
-### List all docker images
-    docker images
-
-### Remove docker images
-    
-    docker rmi <imageaid>
 
 ### List the docker active containers
     docker ps
@@ -33,3 +27,9 @@
 
 ### Remove the containers
     docker rm <container-id> ex: e471a90e5266
+
+### List all docker images
+    docker images
+
+### Remove docker images
+    docker rmi <imageaid>
