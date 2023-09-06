@@ -1,0 +1,19 @@
+Create a spring boot mocroservice which expose 3 end points
+
+    @GetMapping("/getstudent")  USERROLE(user123,password)
+    return "Student1"
+
+    @PutMapping("/updatestudent") ADMINROLE(admin123,password)
+    return "Updeted student1"
+
+    @DeleteMapping("/deletestudent")ADMINROLE(admin123,password)
+    return "deleted Student1"
+
+
+   Tasks
+
+   1) Create read me file and update the information
+   2) Create docker image for the application
+   3) Run the application using command with docker
+   4) Verify the response on post man and curl
+   5) commit the code in day03
