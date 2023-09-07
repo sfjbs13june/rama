@@ -13,12 +13,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/getstudent").hasAnyRole("USER")
+                .antMatchers(HttpMethod.GET, "/updatestudent").hasAnyRole("ADMIN")
                 .and().csrf().disable().headers()
                 .frameOptions().disable();
     }
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("user123").password("{noop}password").roles("USER");
+        auth.inMemoryAuthentication().withUser("user123").password("{noop}password").roles("USER")
+                .withUser("admin123").password("{noop}password").roles("ADMIN");
     }
 
 }
