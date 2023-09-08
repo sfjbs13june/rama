@@ -1,0 +1,9 @@
+student:
+  create:
+    url: /create
+  read:
+    url: /read
+  update:
+    url: /update
+  delete:
+    url: /delete

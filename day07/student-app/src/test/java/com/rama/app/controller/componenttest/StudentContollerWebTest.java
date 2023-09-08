@@ -43,7 +43,7 @@ public class StudentContollerWebTest {
     @Test
     public void test_createStudent() throws Exception {
         Student student = new Student("stud1", "123", 12, "std7");
-        ResultActions resultActions=mockMvc.perform(post("/create").contentType(MediaType.APPLICATION_JSON)
+        ResultActions resultActions=mockMvc.perform(post(create_url).contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(student)).accept(MediaType.APPLICATION_JSON));
         resultActions.andExpect(status().isOk());
         String result_string=resultActions.andReturn().getResponse().getContentAsString();
