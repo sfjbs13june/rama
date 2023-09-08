@@ -1,0 +1,35 @@
+Create  microservice
+
+rama-hospital-management
+
+patient:
+patientname
+id
+hospitalname
+disease
+
+hopsital
+hospitalname
+address
+id
+
+8 rest end
+
+get/patient/-patient name
+post save/patient
+put  update/patient- hospital name
+delete delete/patient
+get/hospital/-hospital name
+post save/hospital
+put  update/hospital----with address
+delete delete/hospital
+
+
+Write unit test and component test
+hospital-management-system
+
+Task:
+1) Readme file
+2)test coverage with more than 80%
+3)component test
+
