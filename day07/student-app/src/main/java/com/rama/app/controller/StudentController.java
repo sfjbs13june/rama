@@ -35,4 +35,9 @@ public class StudentController {
          studentMap.remove(name);
     }
 
+    @GetMapping("/read/{name}")
+    public Student ReadNameStudent(@PathVariable String name){
+        return studentMap.get(name);
+    }
+
 }
