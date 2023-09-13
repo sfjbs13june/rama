@@ -1,6 +1,7 @@
 package com.rama.db.controller;
 
 import com.rama.db.model.Users;
+import com.rama.db.repository.UserNotify;
 import com.rama.db.repository.UsersRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -21,6 +24,8 @@ public class UserControllerTest {
 
     @Mock
     private UsersRepository usersRepository;
+    @Mock
+    private UserNotify userNotify;
 
     @Test
     public void getAllTest(){
@@ -38,12 +43,17 @@ public class UserControllerTest {
         assertEquals("test",result.getName());
         assertEquals(20000,result.getSalary());
         assertEquals("test1",result.getTeamName());
-
     }
-
     @Test
     public void storeTest(){
-
+        doNothing().when(usersRepository.save(any(Users.class)));
+        when(userNotify.isSave()).thenReturn("Data saved to mysql");
+        Users user1=new Users();
+        user1.setId(1);
+        user1.setName("test");
+        user1.setSalary(20000);
+        user1.setTeamName("test1");
+        String result= usersController.store(user1);
+        assertEquals("Data saved to mysql",result);
     }
-
 }
