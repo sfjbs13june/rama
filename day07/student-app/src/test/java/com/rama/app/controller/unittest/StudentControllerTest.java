@@ -2,7 +2,7 @@ package com.rama.app.controller.unittest;
 
 import com.rama.app.controller.StudentController;
 import com.rama.app.model.Student;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -13,8 +13,7 @@ import static junit.framework.TestCase.assertNull;
 @RunWith(MockitoJUnitRunner.class)
 public class StudentControllerTest {
     @InjectMocks
-    private StudentController studentController=new StudentController();
-
+    private StudentController studentController;
     @Test
     public void test_createStudent(){
         Student student=new Student("stud1", "123",12,"std7");
