@@ -1,5 +1,7 @@
 package com.mongo.app.controller;
 
+import com.mongo.app.module.Student;
+import com.mongo.app.repository.StudentRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

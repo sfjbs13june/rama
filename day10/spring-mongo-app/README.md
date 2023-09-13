@@ -9,7 +9,6 @@ mvn clean install
 ``` 
 docker-compose -f docker-compose-mongo.yml up -d
 mvn spring-boot:run
-docker-compose -f docker-compose-mongo.yml down
 
 ```
 ## Creating docker image
@@ -44,7 +43,7 @@ curl -X GET http://localhost:8083/customer/read
 curl -X PUT 'http://localhost:8083/customer/update?custId=1re07&name=Rama' 
 ```
 
-##Delete
+## Delete
 
 ```
 curl -X DELETE 'http://localhost:8083/customer/delete?name=Rama' 
@@ -68,6 +67,8 @@ db.customer.find()
 
 ```
 
+## Stop docker container
+    docker-compose -f docker-compose-mongo.yml down
 
 ## Dockerization
 

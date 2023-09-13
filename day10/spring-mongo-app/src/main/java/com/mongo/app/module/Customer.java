@@ -1,4 +1,4 @@
-package com.mongo.app.controller;
+package com.mongo.app.module;
 
 public class Customer {
 	String name;
