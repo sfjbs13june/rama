@@ -28,8 +28,8 @@ public class CreateController {
 
   @RequestMapping(value = "/update", method = RequestMethod.PUT)
   public void modifyByID(@RequestParam String custId, @RequestParam String name) {
-    Customer customer = customerRepo.findByName(name);
-    customer.setCustId(custId);
+    Customer customer = customerRepo.findBycustId(custId);
+    customer.setName(name);
     customerRepo.save(customer);
   }
 

@@ -1,8 +1,11 @@
 package com.mongo.app.module;
 
+import org.springframework.data.annotation.Id;
+
 public class Customer {
-	String name;
+	@Id
 	String custId;
+	String name;
 	String address;
 	public Customer(String name, String custId, String address) {
 		super();
