@@ -1,0 +1,12 @@
+Producer:
+Expose two end point
+Hospital data send
+Patient data send
+
+Request body send data to rabbit mq
+
+Consumer
+ two listener:
+ patient data
+ hospital data
+ Print the response
