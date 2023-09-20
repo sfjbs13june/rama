@@ -21,10 +21,6 @@ public class PatientControllerTest {
     @Mock
     private DataRepository dataRepository;
 
-    @BeforeEach
-    void setUp(){
-        dataRepository= Mockito.mock(DataRepository.class);
-    }
     @Test
     public void getPatientTest(){
         Patient patient= new Patient("id1","pat01","hospital01","dis01");
