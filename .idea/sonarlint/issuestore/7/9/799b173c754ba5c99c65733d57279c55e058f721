@@ -1,0 +1,6 @@
+
+ø
+java:S1598"âThis file "RabbitMQConsumer.java" should be located in "com/rama/rabbitmq/component" directory, not in "/home/aa100418/gitrama/training_2023/rama/day12/spring-rabbit-app/rabbitmq-app-consumer/src/test/java/rabbitmq/component".(ØÆåC
+V	java:S125"<This block of commented-out lines of code should be removed.(À‘Ùèúÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(åÈÔµøÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(è›û¿ùÿÿÿÿ

@@ -1,0 +1,6 @@
+version: '3'
+services:
+  hospital-app:
+    image: falcon007/hospital-application:1.0.0
+    ports:
+      - "8083:8083"

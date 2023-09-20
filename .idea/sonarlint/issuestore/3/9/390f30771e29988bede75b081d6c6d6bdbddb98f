@@ -1,0 +1,9 @@
+
+]
+java:S1854 "BRemove this useless assignment to local variable "rabbitTemplate".(ÍêÍûÿÿÿÿ
+_
+java:S1854"DRemove this useless assignment to local variable "messageConverter".(Ñ‚àáşÿÿÿÿ
+P
+java:S1481"5Remove this unused "messageConverter" local variable.(Ñ‚àáşÿÿÿÿ
+N
+java:S1481 "3Remove this unused "rabbitTemplate" local variable.(ÍêÍûÿÿÿÿ
