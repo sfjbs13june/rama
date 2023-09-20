@@ -2,11 +2,12 @@ package com.hospital.rama.app.repository;
 
 import com.hospital.rama.app.model.Patient;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+@Repository
 public class DataRepository {
 
     private Map<String, Patient> patientMap= new HashMap<String,Patient>();

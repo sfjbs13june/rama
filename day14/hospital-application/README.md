@@ -1,9 +1,9 @@
-#Build
+# Build
 
-mvn clean install
+    mvn clean install
 
 # Run
-mvn spring-boot:run
+    mvn spring-boot:run
 
 ## Post
 

@@ -47,7 +47,11 @@ public class PatientControllerTest {
     public void updatePatientTest(){
         Patient patient= new Patient("id1","pat01","hospital01","dis01");
         when(dataRepository.getPatient(anyString())).thenReturn(patient);
-        patientController.updatePatient("pat01","hospital02");
+        Patient result=patientController.updatePatient("pat01","hospital02");
+        assertEquals("id1",result.getId());
+        assertEquals("pat01",result.getName());
+        assertEquals("hospital02",result.getHospital());
+        assertEquals("dis01",result.getDisease());
         verify(dataRepository,times(1)).savePatient("pat01",patient);
     }
 
