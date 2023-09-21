@@ -13,9 +13,9 @@ public class PatientSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/save/patient").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/update/patient").hasAnyRole("DOCTOR")
-                .antMatchers(HttpMethod.GET, "/get/patient").hasAnyRole("DOCTOR")
-                .antMatchers(HttpMethod.GET, "/get/header").hasAnyRole("DOCTOR")
+                .antMatchers(HttpMethod.PUT, "/update/patient").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/get/patient").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/get/header").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/remove/patient").hasAnyRole("ADMIN").and().csrf().disable().headers()
                 .frameOptions().disable();
     }

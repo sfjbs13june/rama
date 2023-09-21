@@ -1,0 +1,85 @@
+1) Three controller
+  a)   @RequestMapping("/doctor")
+     public class DoctorController {
+     @GetMapping("/doctorappointment")
+
+    public List<Appointment> getAppointments(@RequestParam String doctorName){
+
+    }
+    @PostMapping("/save")
+    public Appointment saveAppointment(@RequestBody Appointment appointment){
+
+    }
+
+  b)  @RequestMapping("/patient")
+    public class PatientController {
+
+
+    @GetMapping("/myappointment")
+    public List<Appointment> getMyAppointments(@RequestParam String patientName){
+
+    }
+
+    @PostMapping("/save")
+    public Appointment saveAppointment(@RequestBody Appointment appointment){
+
+    }
+
+   c)  @GetMapping("/viewprescription")
+   class PrescriptionController
+          public List<Prescription> getAllPrescriptions(String patientName){
+
+          }
+
+          @PostMapping("/saveprescription")
+          public Prescription savePrescription(@RequestBody Prescription prescription){
+
+          }
+
+   Data Model:
+  a)
+      Appointment :
+
+    String appointmentId;
+    String patientName;
+    String doctorName;
+    String date;
+    Prescription prescription;
+
+  b)   Prescription :
+       String prescriptionId;
+       String appointmentId;
+       String description;
+       String patientName;
+       String doctorName;
+
+
+       Repository:
+
+       AppointmentRepository
+       PrescriptionRepository
+
+       Security access role based:
+
+          "/swagger-ui/index.html")("DOCTOR","PATIENT")
+           "/doctor/doctorappointment").("DOCTOR")
+           "/patient/myappointment").("PATIENT")
+           "/doctor/save").("DOCTOR")
+           "/patient/save").("PATIENT")
+           "/viewprescrption").("DOCTOR","PATIENT")
+           "/saveprescrption").("DOCTOR","PATIENT")
+
+  Note: All the data should get store in mongoDb/Mysql
+
+  TO Do:
+  1) Create a springboot microservice from scratch
+  2) Implement the code as above
+  3) Build with maven test and run
+  4) Create readMe file  with all steps
+  5) Code test case coverage should be more than 80 %
+  6) Dockerize the application(create docker image and docker-compose file)
+  7) Project Structure well managed
+  8) Presentation (PPT and PDF)
+  9) Running and testing
+  10)Swagger doc
+
